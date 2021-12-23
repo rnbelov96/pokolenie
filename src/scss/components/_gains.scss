@@ -2,6 +2,10 @@
   padding-top: 59px;
   position: relative;
 
+  @media (max-width: 1150px) {
+    padding-bottom: 50px;
+  }
+
   @media (max-width: 650px) {
     padding-top: 20px;
   }
