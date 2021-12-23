@@ -1,0 +1,171 @@
+.health {
+  padding-top: 197px;
+  padding-bottom: 325px;
+  color: white;
+  position: relative;
+  z-index: 1;
+
+  @media (max-width: 1150px) {
+    padding-top: 60px;
+    z-index: 3;
+  }
+
+  @media (max-width: 650px) {
+    padding-bottom: 110px;
+  }
+}
+
+.health__title {
+  @include title;
+  text-transform: uppercase;
+  margin-bottom: 59px;
+  @include max-width(596px);
+
+  span {
+    color: $light-yellow;
+  }
+}
+
+.health__text-block {
+  @include max-width(944px);
+  position: relative;
+  margin-bottom: 48px;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    right: -495px;
+    top: -421px;
+    content: url('/src/img/health-img.png');
+
+    @media (max-width: 1150px) {
+      content: none;
+    }
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: 20px;
+  }
+}
+
+.health__text {
+  margin-bottom: 34px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 650px) {
+    margin-bottom: 15px;
+  }
+}
+
+.health__calc-box {
+  background-color: #80c8ef;
+  border-radius: 50px;
+  padding-left: 40px;
+  min-height: 176px;
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  justify-content: space-between;
+
+  @media (max-width: 1150px) {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    @include max-width(650px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.health__calc-left-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 27px;
+  width: 59%;
+
+  @media (max-width: 1150px) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+.health__calc-right-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 27px;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+.health__calc-text {
+  font-weight: bold;
+  font-size: 22px;
+  color: #034ea2;
+  margin-bottom: 0;
+  @include max-width(268px);
+
+  @media (max-width: 1150px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 650px) {
+    text-align: center;
+  }
+}
+
+.health__calc-sign {
+  font-size: 120px;
+  font-weight: 300;
+  margin-bottom: 0;
+
+  @media (max-width: 650px) {
+    font-size: 80px !important;
+    line-height: 40px;
+    height: 40px;
+  }
+}
+
+.health__calc-result {
+  min-height: 176px;
+  background-color: #034ea2;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 32px;
+  padding-right: 34px;
+  @include max-width(340px);
+  font-size: 22px;
+  margin-bottom: 0;
+  border-radius: 50px;
+  font-weight: bold;
+
+  span {
+    color: $yellow;
+  }
+
+  @media (max-width: 650px) {
+    width: 300px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    min-height: auto;
+    font-size: 18px !important;
+  }
+}
