@@ -26,6 +26,18 @@
 
   &_present {
     display: none;
+
+    @media (max-height: 800px) {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    @media (max-width: 840px) and (max-height: 1200px) {
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+    }
     
     @media (max-width: 650px) {
       display: block;

@@ -3,6 +3,14 @@
   min-height: 2196px;
   background-image: url('/src/img/bgs/top-bg.jpg');
 
+  @media (max-height: 800px) {
+    min-height: auto;
+  }
+
+  @media (max-width: 840px) and (max-height: 1200px) {
+    min-height: auto;
+  }
+
   @media (max-width: 650px) {
     min-height: auto;
   }

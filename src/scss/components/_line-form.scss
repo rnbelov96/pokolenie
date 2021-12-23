@@ -28,6 +28,13 @@
   }
 
   &_desc {
+    @media (max-height: 800px) {
+      display: none;
+    }
+
+    @media (max-width: 840px) and (max-height: 1200px) {
+      display: none;
+    }
     @media (max-width: 650px) {
       display: none;
     }
