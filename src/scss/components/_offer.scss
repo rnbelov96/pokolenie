@@ -1,0 +1,132 @@
+.offer {
+  padding-top: 144px;
+  padding-bottom: 344px;
+  color: white;
+
+  @media (max-width: 1150px) {
+    padding-top: 50px;
+  }
+
+  @media (max-width: 910px) {
+    padding-bottom: 90px;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+    padding-bottom: 75px;
+  }
+}
+
+.offer__title {
+  @include title;
+  @include max-width(614px);
+  color: white;
+  margin-bottom: 59px;
+
+  @media (max-width: 650px) {
+    text-align: center;
+  }
+
+  span {
+    color: $light-yellow;
+  }
+}
+
+.offer__text {
+  margin-bottom: 57px;
+  @include tablet-mb;
+  @include mobile-mb;
+
+  @media (max-width: 650px) {
+    text-align: center;
+  }
+}
+
+.offer__list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 42px;
+  position: relative;
+  flex-wrap: wrap;
+
+  @media (max-width: 650px) {
+    gap: 0px;
+    margin-bottom: 10px;
+  }
+
+  &::after {
+    content: url('/src/img/offer-circle.png');
+    right: -300px;
+    top: -510px;
+    position: absolute;
+
+    @media (max-width: 1150px) {
+      content: none;
+    }
+  }
+}
+
+.offer__item {
+  @include max-width(267px);
+  position: relative;
+  padding-top: 63px;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 20px;
+
+  @media (max-width: 650px) {
+    max-width: 300px;
+    text-align: center;
+  }
+
+  &::before {
+    content: url('/src/img/icons/desc-check.svg');
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+    @media (max-width: 650px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.offer__note {
+  width: 1360px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100px;
+  padding-top: 50px;
+  padding-bottom: 47px;
+  padding-left: 164px;
+  padding-right: 164px;
+  text-align: center;
+  color: black;
+  box-shadow: 0px 40px 50px 0 rgba(0, 60, 127, 0.25);
+  margin-bottom: 0;
+  background-color: #cee5ff;
+  font-weight: bold;
+  font-size: 36px;
+
+  @media (max-width: 1380px) {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (max-width: 650px) {
+    border-radius: 50px;
+    font-size: 20px !important;
+    padding: 20px;
+  }
+
+  span {
+    color: #007ce6;
+  }
+}

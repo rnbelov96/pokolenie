@@ -1,0 +1,5 @@
+.middle {
+  @include bg;
+  min-height: 2422px;
+  background-image: url('/src/img/bgs/middle-bg.jpg');
+}
