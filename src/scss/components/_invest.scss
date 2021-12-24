@@ -1,0 +1,213 @@
+.invest {
+  min-height: 1475px;
+  padding-top: 143px;
+  padding-bottom: 150px;
+  @include bg;
+  background-image: url('/src/img/bgs/invest-bg.jpg');
+
+  @media (max-width: 1150px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @media (max-width: 991px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.invest__title {
+  @include title;
+  @include max-width(897px);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 59px;
+  color: white;
+  text-align: center;
+
+  span {
+    color: $light-yellow;
+  }
+}
+
+.invest__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  @include reset-list;
+  margin-bottom: 20px;
+}
+
+.invest__item {
+  border-radius: 30px;
+  background-color: white;
+  min-height: 110px;
+  @include max-width(561px);
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.invest__item-icon-box {
+  @include max-width(120px);
+  border-radius: 30px;
+  background-color: #cee5ff;
+}
+
+.invest__item-text-box {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (max-width: 650px) {
+    padding-right: 8px;
+  }
+}
+
+.invest__item-text {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.invest__item-numbers {
+  font-weight: bold;
+  font-size: 30px;
+  color: #0052ad;
+  margin-bottom: 0;
+}
+
+.invest__result-box {
+  background-color: #002a58;
+  border-radius: 30px;
+  min-height: 110px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 33px;
+  @include mobile-mb;
+
+  @media (max-width: 1150px) {
+    flex-direction: column;
+    @include max-width(561px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.invest__result-left-side {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 85px;
+  @include max-width(492px);
+
+  @media (max-width: 650px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.invest__result-right-side {
+  @include max-width(561px);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 30px;
+  background-color: #003c7f;
+}
+
+.invest__result-text {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 22px;
+  color: white;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.invest__result-numbers {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 0;
+  color: #fddf03;
+  text-align: center;
+}
+
+.invest__note {
+  margin-bottom: 51px;
+  color: white;
+  font-size: 22px;
+  @include tablet-mb;
+  @include mobile-mb;
+
+  @media (max-width: 1150px) {
+    text-align: center;
+  }
+}
+
+.invest__royalty-box {
+  min-height: 153px;
+  background-color: #1a5faa;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1150px) {
+    flex-direction: column;
+    @include max-width(561px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.invest__royalty-left-side {
+  margin-bottom: 0;
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  @include max-width(470px);
+  padding-left: 36px;
+  font-size: 22px;
+
+  @media (max-width: 1150px) {
+    @include max-width(100%);
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+
+  @media (max-width: 650px) {
+    padding-top: 30px;
+  }
+}
+
+.invest__royalty-right-side {
+  border-radius: 30px;
+  background-color: #336fb5;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+  padding: 10px;
+  @include max-width(561px);
+}
+
+.invest__royalty-text {
+  font-size: 22px;
+  margin-bottom: 23px;
+  text-align: center;
+  color: white;
+}
+
+.invest__royalty-number {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+}
