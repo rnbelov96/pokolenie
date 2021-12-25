@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Франшиза «»</title>
+    <title>Франшиза «Аквапоколение»</title>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.5.2/validator.min.js"
       integrity="sha512-vZEoK8xRncku4g5GANHh5zobUjeCMbZkSEahrADeAcRlk/1Ignf8sAKojkV4RZLkPw145+ILJFisI2pnjsPtGQ=="
@@ -74,7 +74,9 @@
               *Безопасное водное пространство — технология предоставления услуги
               с применением бассейнов с автоматическим обеззараживанием воды.
             </p>
-            <button class="button button_present">Получить презентацию</button>
+            <button class="button button_present js-info">
+              Получить информацию
+            </button>
             <form class="line-form line-form_desc">
               <h3 class="line-form__title">
                 Узнайте подробнее о бизнесе в нашей презентации
@@ -84,7 +86,7 @@
                   <div class="line-form__input-box">
                     <input
                       type="tel"
-                      placeholder="+7(___) ___ ____"
+                      placeholder="+7 (___) ___ ____"
                       name="phone"
                       data-type="phone"
                       class="line-form__input"
@@ -116,7 +118,9 @@
               <p class="line-form__policy">
                 Я подтверждаю, что ознакомлен, и даю согласие на обработку
                 персональных данных на условиях и для целей, определяемых
-                <button class="js-policy">Политикой конфиденциальности</button>
+                <button type="button" class="js-policy">
+                  Политикой конфиденциальности
+                </button>
               </p>
             </form>
           </div>
@@ -233,7 +237,9 @@
             <p class="gains__note-text">
               Получите больше информации о рынке в презентации
             </p>
-            <button class="button button_gains">Получить информацию</button>
+            <button class="button button_gains js-info">
+              Получить информацию
+            </button>
           </div>
         </div>
       </section>
@@ -357,7 +363,9 @@
             <p class="train__note-text">
               Получить подробную информацию о занятиях
             </p>
-            <button class="button button_train">Получить информацию</button>
+            <button class="button button_train js-info">
+              Получить информацию
+            </button>
           </div>
         </div>
       </section>
@@ -479,7 +487,9 @@
               <p class="steps__note-text">
                 Узнайте подробно о каждом этапе запуска из нашей презентации
               </p>
-              <button class="button button_steps">Получить информацию</button>
+              <button class="button button_steps js-info">
+                Получить информацию
+              </button>
             </div>
           </div>
         </section>
@@ -603,107 +613,312 @@
         </div>
       </section>
 
-      <section class="calc"></section>
-      <div class="container">
-        <h2 class="calc__title">
-          <span>Рассчитайте потенциальный заработок</span> всего за 3 клика и 1
-          минуту
-        </h2>
-        <div class="calc__content">
-          <div class="calc__input-box">
-            <p class="calc__input-label">Количество разовых занятий</p>
-            <input
-              type="range js-range js-once-range"
-              min="60"
-              value="64"
-              max="70"
-              step="2"
-              class="calc__input"
-            />
-            <div class="calc__endpoints">
-              <div class="calc__endpoint">60</div>
-              <div class="calc__endpoint">70</div>
+      <section class="calc">
+        <div class="container">
+          <h2 class="calc__title">
+            <span>Рассчитайте потенциальный заработок</span> всего за 3 клика и
+            1 минуту
+          </h2>
+          <div class="calc__content">
+            <div class="calc__phone-box">
+              <img src="./img/calc-hand.png" class="calc__phone-img" />
+              <p class="calc__phone-result js-calc-result">135507</p>
+            </div>
+            <div class="calc__input-box">
+              <p class="calc__input-label">Количество разовых занятий</p>
+              <input
+                type="range"
+                min="60"
+                value="64"
+                max="70"
+                step="2"
+                class="calc__input js-range js-once-range"
+              />
+              <div class="calc__endpoints">
+                <div class="calc__endpoint">60</div>
+                <div class="calc__endpoint">70</div>
+              </div>
+            </div>
+            <div class="calc__input-box">
+              <p class="calc__input-label">Количество абонементов</p>
+              <input
+                type="range"
+                min="65"
+                max="85"
+                step="2"
+                value="71"
+                class="calc__input js-range js-abonement-range"
+              />
+              <div class="calc__endpoints">
+                <div class="calc__endpoint">65</div>
+                <div class="calc__endpoint">85</div>
+              </div>
+            </div>
+            <div class="calc__input-box">
+              <p class="calc__input-label">Средний чек</p>
+              <input
+                type="range"
+                min="6000"
+                max="7500"
+                step="100"
+                value="6600"
+                class="calc__input js-range js-check-range"
+              />
+              <div class="calc__endpoints">
+                <div class="calc__endpoint">6000</div>
+                <div class="calc__endpoint">7500</div>
+              </div>
+            </div>
+            <div class="calc__result-box">
+              <p class="calc__result">
+                Прибыль за месяц
+                <span><span class="js-calc-result">135 500</span> ₽</span>
+              </p>
             </div>
           </div>
-          <div class="calc__input-box">
-            <p class="calc__input-label">Количество абонементов</p>
-            <input
-              type="range js-range js-abonement-range"
-              min="65"
-              max="85"
-              step="2"
-              value="71"
-              class="calc__input"
-            />
-            <div class="calc__endpoints">
-              <div class="calc__endpoint">65</div>
-              <div class="calc__endpoint">85</div>
+          <div class="calc__note-box">
+            <p class="calc__note-title">
+              Посмотрите на финансовые показатели бизнес-модели:
+            </p>
+            <ul class="calc__list">
+              <li class="calc__item">
+                <p class="calc__item-title">Средняя выручка</p>
+                <p class="calc__item-numbers">
+                  от 650&nbsp;000 до 900&nbsp;000 ₽
+                </p>
+              </li>
+              <li class="calc__item">
+                <p class="calc__item-title">Средняя чистая прибыль</p>
+                <p class="calc__item-numbers">
+                  от 150&nbsp;000 до 200&nbsp;000 ₽
+                </p>
+              </li>
+              <li class="calc__item">
+                <p class="calc__item-title">Окупаемость</p>
+                <p class="calc__item-numbers">от 15 до 17 месяцев</p>
+              </li>
+            </ul>
+            <div class="calc__note-bottom">
+              <p class="calc__note-bottom-text">
+                <b>Остались вопросы по финансам?</b><br />
+                Задайте их в бесплатной консультации по экономике проекта
+              </p>
+              <button class="button button_calc js-callback">
+                Получить консультацию
+              </button>
             </div>
           </div>
-          <div class="calc__input-box">
-            <p class="calc__input-label">Средний чек</p>
-            <input
-              type="range js-range js-check-range"
-              min="6000"
-              max="7500"
-              step="100"
-              value="6600"
-              class="calc__input"
-            />
-            <div class="calc__endpoints">
-              <div class="calc__endpoint">6000</div>
-              <div class="calc__endpoint">7500</div>
-            </div>
-          </div>
-          <div class="calc__result-box">
-            <p class="calc__result">
-              Прибыль за месяц
-              <span><span class="js-calc-result">135 500</span>₽</span>
+        </div>
+      </section>
+
+      <section class="control">
+        <div class="container">
+          <h2 class="control__title">
+            Следуйте нашим инструкциям <br />
+            и <span>управляйте бизнесом эффективно,</span> а значит прибыльно
+          </h2>
+          <p class="control__text">
+            После запуска вам останется осознанно использовать подробные и
+            точные инструкции по управлению бизнесом, которые уже готовы:
+          </p>
+          <ul class="control__list">
+            <li class="control__item">
+              <p>
+                Обучение сотрудников и успешно опробованные методы
+                взаимодействия с командой;
+              </p>
+            </li>
+            <li class="control__item">
+              <p>Скрипты продаж и технологии маркетинга;</p>
+            </li>
+            <li class="control__item">
+              <p>
+                Технологии операционного управления: регламенты, условия
+                мотивации, способы контроля сотрудников;
+              </p>
+            </li>
+            <li class="control__item">
+              <p>Юридические аспекты и управленческий учёт;</p>
+            </li>
+            <li class="control__item"><p>Технологии найма сотрудников;</p></li>
+            <li class="control__item">
+              <p>Стандарты обслуживания клиентов;</p>
+            </li>
+          </ul>
+          <div class="control__note-box">
+            <p class="control__note-left-side">
+              Также доводим самые свежие идеи, кейсы <br />
+              и прислушиваемся к Вашему опыту и мнению;
+            </p>
+            <p class="control__note-right-side">
+              В результате Вы действуете уверенно <br />
+              и без ошибок, даже если это Ваш первый бизнес.
             </p>
           </div>
         </div>
-        <div class="calc__note-box">
-          <p class="calc__note-title">
-            Посмотрите на финансовые показатели бизнес-модели:
-          </p>
-          <ul class="calc__list">
-            <li class="calc__item">
-              <p class="calc__item-title">Средняя выручка</p>
-              <p class="calc__item-numbers">
-                от 650&nbsp;000 до 900&nbsp;000 ₽
-              </p>
-            </li>
-            <li class="calc__item">
-              <p class="calc__item-title">Средняя чистая прибыль</p>
-              <p class="calc__item-numbers">
-                от 150&nbsp;000 до 200&nbsp;000 ₽
-              </p>
-            </li>
-            <li class="calc__item">
-              <p class="calc__item-title">Окупаемость</p>
-              <p class="calc__item-numbers">от 15 до 17 месяцев</p>
-            </li>
-          </ul>
-          <div class="calc__note-bottom">
-            <p class="calc__note-bottom-text">
-              <b>Остались вопросы по финансам?</b><br />
-              Задайте их в бесплатной консультации по экономике проекта
+      </section>
+
+      <section class="open">
+        <div class="container">
+          <h2 class="open__title">
+            <span>
+              Откройте центр раннего плавания по модели «Аквапоколение»
+            </span>
+            и пройдите 4-х летний путь за 37 дней при поддержке основателя
+            компании
+          </h2>
+          <div class="open__content">
+            <p class="open__subtitle">
+              Заинтересовались <br />
+              или остались вопросы?
             </p>
-            <button class="button button_calc">Получить консультацию</button>
+            <p class="open__text">
+              Получите презентацию о компании и анкету партнёра на почту и без
+              спешки ознакомьтесь с деталями открытия бизнеса, узнайте больше о
+              команде «Аквапоколение» и процессах в компании.
+            </p>
+          </div>
+          <form class="line-form line-form_open">
+            <h3 class="line-form__title">
+              Узнайте подробности открытия своего Центра
+            </h3>
+            <div class="line-form__content">
+              <div class="line-form__input-container">
+                <div class="line-form__input-box">
+                  <input
+                    type="tel"
+                    placeholder="+7 (___) ___ ____"
+                    name="phone"
+                    data-type="phone"
+                    class="line-form__input"
+                  />
+                </div>
+                <div class="line-form__input-box">
+                  <input
+                    type="email"
+                    placeholder="best-franchisee@mail.ru"
+                    name="email"
+                    data-type="email"
+                    class="line-form__input"
+                  />
+                </div>
+                <div class="line-form__input-box">
+                  <input
+                    type="text"
+                    placeholder="Елена Батракова"
+                    name="name"
+                    data-type="name"
+                    class="line-form__input"
+                  />
+                </div>
+              </div>
+              <button class="button button_line-form">
+                Получить презентацию
+              </button>
+            </div>
+            <p class="line-form__policy">
+              Я подтверждаю, что ознакомлен, и даю согласие на обработку
+              персональных данных на условиях и для целей, определяемых
+              <button type="button" class="js-policy">
+                Политикой конфиденциальности
+              </button>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__left-side">
+            <p class="footer__company-name">© «Аквапоколение», 2017-2021 г.</p>
+            <p class="footer__company-data">
+              ООО «Поколение» <br />
+              ИНН 745108904260
+            </p>
+            <address class="footer__address">Россия, г. Москва</address>
+          </div>
+          <div class="footer__center">
+            <img
+              src="./img/icons/logo.png"
+              width="127"
+              height="60"
+              alt="Логотип компании"
+              class="footer__logo"
+            />
+            <div class="footer__socials-box">
+              <a href="" target="_blank" class="footer__social"></a
+              ><a href="" target="_blank" class="footer__social"></a
+              ><a href="" target="_blank" class="footer__social"></a>
+            </div>
+            <button class="footer__policy js-policy">
+              Политика конфиденциальности
+            </button>
+          </div>
+          <div class="footer__right-side">
+            <div class="footer__contact-box">
+              <a href="tel:+" class="footer__phone">7 (951) 239-89-23</a
+              ><button class="footer__callback js-callback">
+                Заказать звонок
+              </button>
+            </div>
+            <a href="" target="_blank" class="footer__franch5"
+              >Упаковка и продвижение <br />
+              франшиз: «Франчайзинг5»</a
+            >
           </div>
         </div>
       </div>
-    </main>
+    </footer>
 
     <div class="modal">
       <div class="modal__center-wrapper">
         <form class="modal-form">
           <h3 class="modal-form__title">
-            Оставьте заявку <span class="js-modal-form-title"></span>
+            <span class="js-modal-form-title"
+              >Получите подробную информацию о франшизе</span
+            >
           </h3>
-          <button class="button button_modal-form js-modal-form-btn">
-            Получить документацию
-          </button>
+          <div class="modal-form__content">
+            <div class="modal-form__input-container">
+              <div class="modal-form__input-box">
+                <input
+                  type="tel"
+                  placeholder="+7 (___) ___ ____"
+                  name="phone"
+                  data-type="phone"
+                  class="modal-form__input"
+                />
+              </div>
+              <div class="modal-form__input-box">
+                <input
+                  type="email"
+                  placeholder="best-franchisee@mail.ru"
+                  name="email"
+                  data-type="email"
+                  class="modal-form__input"
+                />
+              </div>
+              <div class="modal-form__input-box">
+                <input
+                  type="text"
+                  placeholder="Елена Батракова"
+                  name="name"
+                  data-type="name"
+                  class="modal-form__input"
+                />
+              </div>
+            </div>
+            <button class="button button_modal-form js-modal-form-btn">
+              Получить презентацию
+            </button>
+          </div>
+          <p class="modal-form__policy">
+            Я подтверждаю, что ознакомлен, и даю согласие на обработку
+            персональных данных на условиях и для целей, определяемых
+            <button class="js-policy">Политикой конфиденциальности</button>
+          </p>
           <button
             data-modal-close=""
             class="modal__close"
@@ -734,8 +949,8 @@
           <li class="priv-policy__item">
             2. Настоящая политика Оператора в отношении обработки персональных
             данных (далее – Политика) применяется ко всей информации, которую
-            Оператор может получить о посетителях веб-сайта компании «Название
-            Компании».
+            Оператор может получить о посетителях веб-сайта компании
+            «Аквапоколение» (ООО «Поколение», ИНН 745108904260).
           </li>
         </ol>
 
@@ -861,7 +1076,7 @@
             новых продуктах и услугах, специальных предложениях и различных
             событиях. Пользователь всегда может отказаться от получения
             информационных сообщений, направив Оператору письмо на адрес
-            электронной почты с доменом email@mail.ru с пометкой «Отказ от
+            электронной почты с доменом batrakovva@list.ru с пометкой «Отказ от
             уведомлений о новых продуктах и услугах и специальных предложениях».
           </li>
           <li class="priv-policy__item">

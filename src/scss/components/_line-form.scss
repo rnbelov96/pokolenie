@@ -149,6 +149,14 @@
   border: none;
   background-color: transparent;
 
+  &:focus {
+    outline: none;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
+
   &::-webkit-input-placeholder {
     color: #a5a5a5;
     font-style: italic;

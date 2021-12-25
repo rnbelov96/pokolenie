@@ -24,6 +24,11 @@
     @include max-width(300px);
   }
 
+  &_modal-form {
+    max-width: 100%;
+    min-height: 60px;
+  }
+
   &_present {
     display: none;
 

@@ -52,12 +52,69 @@
   display: flex;
   justify-content: space-between;
   gap: 25px;
+
+  &:nth-child(1) .invest__item-icon-box::before {
+    content: url('/src/img/icons/invest/1.svg');
+    width: 59px;
+    height: 63px;
+  }
+  &:nth-child(2) .invest__item-icon-box::before {
+    content: url('/src/img/icons/invest/2.svg');
+    width: 67px;
+    height: 65px;
+  }
+  &:nth-child(3) .invest__item-icon-box::before {
+    content: url('/src/img/icons/invest/3.svg');
+    width: 60px;
+    height: 56px;
+  }
+  &:nth-child(4) .invest__item-icon-box::before {
+    content: url('/src/img/icons/invest/4.svg');
+    width: 59px;
+    height: 40px;
+  }
+  &:nth-child(5) .invest__item-icon-box::before {
+    content: url('/src/img/icons/invest/5.svg');
+    width: 56px;
+    height: 53px;
+  }
+  &:nth-child(6) .invest__item-icon-box::before {
+    content: url('/src/img/icons/invest/6.svg');
+    width: 56px;
+    height: 64px;
+  }
+  &:nth-child(7) .invest__item-icon-box::before {
+    content: url('/src/img/icons/invest/7.svg');
+    width: 59px;
+    height: 54px;
+  }
+  &:nth-child(8) .invest__item-icon-box::before {
+    content: url('/src/img/icons/invest/8.svg');
+    width: 53px;
+    height: 29px;
+  }
+  &:nth-child(9) .invest__item-icon-box::before {
+    content: url('/src/img/icons/invest/9.svg');
+    width: 54px;
+    height: 75px;
+  }
+  &:nth-child(10) .invest__item-icon-box::before {
+    content: url('/src/img/icons/invest/10.svg');
+    width: 42px;
+    height: 58px;
+  }
 }
 
 .invest__item-icon-box {
   @include max-width(120px);
   border-radius: 30px;
   background-color: #cee5ff;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    @include central-align;
+  }
 }
 
 .invest__item-text-box {
