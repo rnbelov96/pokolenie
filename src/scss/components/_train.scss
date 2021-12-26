@@ -96,6 +96,13 @@
   bottom: 0px;
   @include max-width(439px);
 
+  @media (max-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
   @media (max-width: 650px) {
     padding-left: 15px;
     padding-right: 15px;

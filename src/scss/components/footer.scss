@@ -116,6 +116,10 @@
   &:active {
     text-decoration: underline;
   }
+
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
 }
 
 .footer__right-side {
@@ -136,6 +140,10 @@
   padding-left: 34px;
   margin-bottom: 57px;
 
+  &:hover::before {
+    transform: rotate(10deg) translateY(-50%);
+  }
+
   @media (max-width: 1080px) {
     margin-bottom: 20px;
   }
@@ -151,6 +159,7 @@
     left: 0px;
     top: 50%;
     transform: translateY(-50%);
+    transition: all 0.5s;
   }
 }
 
@@ -168,7 +177,7 @@
   }
 
   @media (max-width: 650px) {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -186,7 +195,7 @@
   }
 
   @media (max-width: 650px) {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
@@ -215,6 +224,7 @@
   }
 
   @media (max-width: 650px) {
-    font-size: 20px;
+    padding-left: 60px;
+    font-size: 16px;
   }
 }
