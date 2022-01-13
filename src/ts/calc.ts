@@ -23,8 +23,9 @@ let adultsCurrentStep = 3;
 let kidsCurrentStep = 6;
 
 const calcResult = () => {
-  result = (Number(onceRange.value) + Number(abonementRange.value))
-    * Number(checkRange.value);
+  result = (Number(onceRange.value) * Number(checkRange.value)
+      + Number(abonementRange.value) * Number(checkRange.value))
+    * 0.18;
   resultLabelElList.forEach(resultLabelEl => {
     resultLabelEl.textContent = result.toLocaleString();
   });
