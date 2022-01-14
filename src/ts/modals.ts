@@ -12,6 +12,12 @@ const modalFormInfoList = [
     title: 'Получите подробную информацию о франшизе',
     button: 'Получить информацию',
   },
+  {
+    title: `Уже уходите? <br> 
+      Не упустите шанс открыть собственный центр раннего плавания. <br>
+      Получите бесплатную презентацию на почту.`,
+    button: 'Получить презентацию',
+  },
 ];
 
 const closeModal = (modalEl: HTMLDivElement) => {
@@ -24,7 +30,9 @@ const closeModal = (modalEl: HTMLDivElement) => {
 
 const openModal = (modalEl: HTMLDivElement) => {
   if (window.innerWidth > document.body.clientWidth) {
-    document.body.style.paddingRight = `${window.innerWidth - document.body.clientWidth}px`;
+    document.body.style.paddingRight = `${
+      window.innerWidth - document.body.clientWidth
+    }px`;
   }
   modalEl.style.opacity = '1';
   modalEl.style.overflowY = 'auto';
@@ -41,13 +49,20 @@ const youtubeModalWrapperEl = youtubeModalEl?.querySelector(
 ) as HTMLDivElement;
 let isYoutubeModalOpened = false;
 
-const formTitleEl = formModalEl.querySelector('.js-modal-form-title') as HTMLSpanElement;
-const formBtnEl = formModalEl.querySelector('.js-modal-form-btn') as HTMLButtonElement;
+const formTitleEl = formModalEl.querySelector(
+  '.js-modal-form-title',
+) as HTMLSpanElement;
+const formBtnEl = formModalEl.querySelector(
+  '.js-modal-form-btn',
+) as HTMLButtonElement;
 
 const modalWrapperElList = document.querySelectorAll('.modal__center-wrapper');
 modalElList.forEach(modalEl => {
   modalEl.addEventListener('click', (e: Event) => {
-    if (e.target === e.currentTarget || [...modalWrapperElList].includes(e.target as Element)) {
+    if (
+      e.target === e.currentTarget
+      || [...modalWrapperElList].includes(e.target as Element)
+    ) {
       const clickedModal = e.currentTarget as HTMLDivElement;
       // Если модальных видео несколько, проверить каждое
       if (clickedModal === youtubeModalEl) {
@@ -97,6 +112,18 @@ infoBtnElList.forEach(btn => {
     formBtnEl.textContent = modalFormInfoList[1].button;
     openModal(formModalEl as HTMLDivElement);
   });
+});
+
+let isLeaveModalOpened = false;
+
+document.addEventListener('mouseleave', e => {
+  if (e.clientY < 10 && !isLeaveModalOpened) {
+    isLeaveModalOpened = true;
+    openedModalList.unshift(formModalEl);
+    formTitleEl.innerHTML = modalFormInfoList[2].title;
+    formBtnEl.textContent = modalFormInfoList[2].button;
+    openModal(formModalEl as HTMLDivElement);
+  }
 });
 
 // Для каждого модального окна с видео прописать такой обработчик
