@@ -18,6 +18,10 @@
     z-index: 3;
   }
 
+  @media (max-width: 830px) {
+    padding-bottom: 50px;
+  }
+
   @media (max-width: 650px) {
     padding-bottom: 110px;
   }

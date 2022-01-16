@@ -29,6 +29,12 @@
   span {
     color: $yellow;
   }
+
+  b {
+    @media (max-width: 650px) {
+      color: $yellow;
+    }
+  }
 }
 
 .steps__list {
